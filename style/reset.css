@@ -1,8 +1,8 @@
-///////////////////////////////////////////////////////////////////////////////////////////////
+/*//////////////////////////////////////////////////////////////////////////////////////////////
 // cleverResets
 // This is a simple reset partial that reduces browser inconsistencies in things like default
 // line heights, margins and font sizes of headings, and so on. No edits necessary.
-///////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 * {
@@ -46,13 +46,11 @@ summary {
   display: block;
 }
 
-// Fix the character spacing for headings
 h1, h2, h3 {
   text-rendering: optimizelegibility; 
   font-weight: normal;
 }
 
-// Remove the gray background color from active links in IE 10.
 a {
   background-color: transparent;
 }
@@ -72,7 +70,6 @@ img {
 }
 
 
-// Address differences between Firefox and other browsers.
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -95,7 +92,6 @@ textarea {
   background: none;
 }
 
-// Address `overflow` set to `hidden` in IE 8/9/10/11.
 button {
   overflow: visible;
 }
@@ -124,7 +120,6 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-// Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet.
 input {
   line-height: normal;
 }
@@ -153,9 +148,9 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 fieldset {
- // border: 1px solid #c0c0c0;
- // margin: 0 2px;
- // padding: 0.35em 0.625em 0.75em;
+ border: 1px solid #c0c0c0;
+ margin: 0 2px;
+ padding: 0.35em 0.625em 0.75em;
 }
 
 legend {
