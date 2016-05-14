@@ -22,7 +22,9 @@ export default class Home extends Component {
 		      	<p>Created during <a href="https://hacktothefuture.splashthat.com" target="_blank">Hack to the Future Hackathon</a></p>
 	      	</div>
 	      	<div className={styles.footerRight}>
-	      		<img className={styles.cb} src={require('../../img/cb-logo-white.png')}  />
+		      	<a href="https://cleverbridge.com" target="_blank">
+		      		<img className={styles.cb} src={require('../../img/cb-logo-white.png')}  />
+		      	</a>
 	      	</div>
 	     	</footer>
       </div>

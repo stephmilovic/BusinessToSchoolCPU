@@ -9,6 +9,9 @@ class PostsNew extends Component {
   static contextTypes = {
     router: PropTypes.object
   };
+  componentDidMount() {
+  	document.querySelector('#dateSubmit').focus();
+  }
 
   onSubmit(props) {
     this.props.createPost(props)
@@ -16,7 +19,7 @@ class PostsNew extends Component {
         // blog post has been created, navigate the user to the index
         // We navigate by calling this.context.router.push with the
         // new path to navigate to.
-        this.context.router.push('/');
+        this.context.router.push('posts');
       });
   }
 
@@ -89,10 +92,9 @@ class PostsNew extends Component {
 	          <input type="text" className="form-control" aria-label="..." {...tablets} />
           </div>
         </div>
-
         <div style={{display: 'none'}}>
           <label>Date Submitted</label>
-          <input type="text" className="form-control" {...date} />
+          <input id="dateSubmit" type="text" className="form-control" {...date} value={date.value || ''} />
         </div>
 
         <div className={`form-group  ${school_info.touched && school_info.invalid ? 'has-danger' : ''}`}>

@@ -18,10 +18,10 @@ class PostsIndex extends Component {
 		      <h2><strong className={styles.schoolName}>{post.school_name}</strong></h2>
           <li className={styles.postInfo}>{post.school_info}</li>
           <div className={styles.days}>
-          <span className={styles.daysSince}>{post.days}</span>
+          <span className={styles.daysSince}>{ post.days ? post.days : 0  }</span>
           <span className={styles.daysSinceText}>Days Since Order</span>
           </div>
-          <button type="submit" className={'btn ' + styles.submitBtn + ' ' + styles.helpButton}>Help This School</button>
+          <a href={'mailto:' + post.contact_email + '?subject=' + post.school_name + ' Techology Donation&body=Hi ' + post.contact_name + '. My company has technology we are interested in donating to ' + post.school_name + '. Let\'s make it happen!'}><button type="submit" className={'btn ' + styles.submitBtn + ' ' + styles.helpButton}>Help This School</button></a>
           <ul>
 	          <li className={styles.listItems}><strong>{post.pcs}</strong> Desktops</li>
 	          <li className={styles.listItems}><strong>{post.laptops}</strong> Laptops</li>
