@@ -1,3 +1,31 @@
 form a {
   margin-left: 5px;
 }
+
+li{
+	list-style: none;
+}
+.days{
+	float: right;
+	width: 15%;
+	position: relative;
+
+}
+.days-since{
+	font-size: 40px;
+	margin-right: 24px;
+	margin-bottom: -10px;
+	float: right;
+}
+.days-since-text{
+	font-size: 15px;
+	float: right;
+	text-align: center;
+}
+.school-name{
+	font-size: 28px;
+}
+.list-group{
+	width: 95%;
+	max-width: 900px;
+}
