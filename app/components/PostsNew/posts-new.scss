@@ -1,10 +1,27 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
 .submitBtn {
-	background: #2D97DF;
-	border-color: #2D97DF;
-	color: #fff;
+	background: $school-color;
+	border-color: $school-color;
+	color: $light-font-color;
+	margin-right: 10px;
+	&:hover {
+		background: darken($school-color, 10);
+		border-color: darken($school-color, 10);
+	}
 }
 
-.submitBtn:hover {
-	background: #1D83C8;
-	border-color: #1D83C8;
+.counters {
+	position: relative;
+	float: left;
+	transition: all 0.2s ease-in-out;
+	width: 100%;
+	@include media($medium-screen) {
+	  @include span-columns(4);
+	}
+}
+
+.formGroup {
+	@extend %clearfix;
 }

@@ -1,0 +1,91 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+.navigationBar {
+	padding: 25px 20px;
+	    float: right;
+	// ul {
+	//     list-style-type: none;
+	//     margin: 0;
+	//     overflow: hidden;
+	//}
+
+	li {
+		font-weight: bold;
+    float: right;
+    position: relative;
+		margin-right: 30px;;
+		font-size: $base-font-size * 1.1
+	}
+
+	li a {
+		color: $light-font-color;
+		text-decoration: none;
+		float: right;
+		&:hover {
+			color: darken($light-font-color, 10);
+			text-decoration: none;
+			border-bottom: 2px solid;
+		}	
+	}
+
+}
+.header {
+	position: absolute;
+	z-index: 99;
+    width: 100%;
+}
+
+.logo { 
+	width: 75px;
+	height: auto;
+	display: inline-block;
+	margin: 0 20px;
+}
+.footer{
+  background-color: $footer-bg-color;
+  color: $footer-font-color;
+  clear: both;
+  padding: 10px;
+  margin-left: auto;
+  width: 100%;
+  p {
+  	color: $footer-font-color;
+  }
+  a {
+  	color: $footer-link-color;
+  		text-decoration: underline;
+  	&:hover {
+  		color: $footer-link-color;
+  		text-decoration: underline;
+  	}
+  }
+}
+.layout{
+  flex: 1;
+	z-index: 0;
+}
+#app{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.arrow {
+	width: 50px;
+}
+
+.cb {
+	float: right;
+	width: 150px;
+}
+
+.footerLeft {
+	@include span-columns(9);
+}
+
+.footerRight {
+	@include span-columns(3);
+	@include omega();
+	padding: 40px;
+}

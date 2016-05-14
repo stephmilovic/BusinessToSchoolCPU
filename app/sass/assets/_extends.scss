@@ -8,6 +8,12 @@
 // More info: https://dev.chi.cleverbridge.com/Steph/sassy/placeholders/
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
+// columns
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+
 // Inline Block
 %inline-block { 
   display: -moz-inline-stack;

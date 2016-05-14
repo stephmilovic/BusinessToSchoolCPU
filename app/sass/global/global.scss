@@ -26,9 +26,13 @@ html {
 
 body {
   color: $base-font-color;
-  font-family: $base-font-family;
+  font-family: $base-font-family !important;
   font-size: $base-font-size;
   line-height: $base-line-height;
+}
+
+footer {
+	@extend %clearfix;
 }
 
 h1, h2, h3, p {
@@ -76,9 +80,6 @@ p {
   margin-bottom: 0.55em;
 }
 
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: 'bariol-web';
-    src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.svg#bariol_regularregular") format("svg"); } 
+.form-group {
+	@extend %clearfix;
 }

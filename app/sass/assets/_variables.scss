@@ -11,8 +11,8 @@
 
 
 // Typography
-$sans-serif: 							"lato",Helvetica,Arial,sans-serif;
-$serif: 									"lato",Helvetica,Arial,sans-serif;
+$sans-serif: 							"Karla",Helvetica,Arial,sans-serif;
+$serif: 									"Karla",Helvetica,Arial,sans-serif;
 $base-font-family: 				$sans-serif;
 $accent-font-family: 			$serif;
 $heading-font-family:			$accent-font-family;
@@ -20,7 +20,7 @@ $ie-font-family:					Tahoma, Geneva, sans-serif;
 $icon-font-family: 				'cleverFont';
 
 // Font Sizes
-$base-font-size: 					1.05em;
+$base-font-size: 					14px;
 
 $large-font-size:					$base-font-size * 1.5; // 19.6px
 $medium-font-size:				$base-font-size * 1.2; // 16.8px
@@ -72,7 +72,7 @@ $accent-color:						$orange;
 $base-bg-color: 					$off-white;
 $header-bg-color: 				$white;
 $sidebar-bg-color:				$off-black;
-$footer-bg-color: 				$off-black;
+$footer-bg-color: 				$blue-dark;
 $nav-bg-color:						$off-black;
 $wrapper-bg-color: 				$white;
 $popup-bg-color: 					$white;			// use for any background of something that is overlaid on page (popups, modals, tooltips)

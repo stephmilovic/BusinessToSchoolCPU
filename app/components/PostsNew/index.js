@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import styles from './posts-new';
 
 class PostsNew extends Component {
+
   static contextTypes = {
     router: PropTypes.object
   };
@@ -20,11 +21,11 @@ class PostsNew extends Component {
   }
 
   render() {
-    const { fields: { school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info }, handleSubmit } = this.props;
-
+    
+  	const { fields: { school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info, pcs, laptops, tablets, date }, handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-        <h3>Create A New Post</h3>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}  className="container">
+        <h3>New Equipment Request</h3>
         <div className={`form-group ${school_name.touched && school_name.invalid ? 'has-danger' : ''}`}>
           <label>School Name</label>
           <input type="text" className="form-control" {...school_name} />
@@ -73,13 +74,35 @@ class PostsNew extends Component {
           </div>
         </div>
 
-        <div className={`form-group ${school_info.touched && school_info.invalid ? 'has-danger' : ''}`}>
+        <div className={`form-group`}>
+          <h3>What do you need?</h3>
+          <div className={styles.counters}>
+	          <label>Desktops:</label>
+	          <input type="text" className="form-control" aria-label="..." {...pcs} />
+          </div>
+        	<div className={styles.counters}>
+	          <label>Laptops:</label>
+	          <input type="text" className="form-control" aria-label="..." {...laptops} />
+          </div>
+          <div className={styles.counters}>
+	          <label>Tablets:</label>
+	          <input type="text" className="form-control" aria-label="..." {...tablets} />
+          </div>
+        </div>
+
+        <div style={{display: 'none'}}>
+          <label>Date Submitted</label>
+          <input type="text" className="form-control" {...date} />
+        </div>
+
+        <div className={`form-group  ${school_info.touched && school_info.invalid ? 'has-danger' : ''}`}>
           <label>Tell us more!</label>
           <textarea className="form-control" {...school_info} />
           <div className="text-help">
             {school_info.touched ? school_info.error : ''}
           </div>
         </div>
+
         <button type="submit" className={'btn ' + styles.submitBtn}>Submit</button>
         <Link to="/" className="btn btn-danger">Cancel</Link>
       </form>
@@ -106,10 +129,10 @@ function validate(values) {
     errors.school_address = 'Enter your school\'s address';
   }
   if(!values.school_zip) {
-    errors.school_zip = 'Enter some content';
+    errors.school_zip = 'Enter your school\'s zip code';
   }
   if(!values.school_info) {
-    errors.school_info = 'Enter some content';
+    errors.school_info = 'Let us know why you need the equipment!';
   }
 
   return errors;
@@ -119,6 +142,9 @@ function validate(values) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'PostsNewForm',
-  fields: ['school_name', 'contact_name', 'contact_email', 'contact_phone', 'school_address', 'school_zip', 'school_info'],
+  fields: ['school_name', 'contact_name', 'contact_email', 'contact_phone', 'school_address', 'school_zip', 'school_info', 'pcs', 'laptops', 'tablets', 'date'],
+  initialValues: {
+    date: new Date()
+  },
   validate
 }, null, { createPost })(PostsNew);

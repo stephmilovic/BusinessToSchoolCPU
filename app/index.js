@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import reducers from './reducers';
 import routes from './routes';
+import styles from './sass/global/global';
 
 const createStoreWithMiddleware = applyMiddleware(
   thunk
