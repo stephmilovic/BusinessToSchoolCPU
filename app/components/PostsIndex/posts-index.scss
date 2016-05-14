@@ -1,0 +1,30 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+li{
+	list-style: none;
+}
+.days{
+	float: right;
+	width: 15%;
+	position: relative;
+
+}
+.daysSince{
+	font-size: 40px;
+	margin-right: 24px;
+	margin-bottom: -10px;
+	float: right;
+}
+.daysSinceText{
+	font-size: 15px;
+	float: right;
+	text-align: center;
+}
+.schoolName{
+	font-size: 28px;
+}
+.listGroup {
+	width: 95%;
+	max-width: 900px;
+}

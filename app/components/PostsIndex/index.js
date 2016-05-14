@@ -16,8 +16,20 @@ class PostsIndex extends Component {
 		  schools.push(
 		    <li className="list-group-item" key={key}>
 		      <Link to={"posts/" + key}>
-		        <strong>{post.school_name}</strong>
+		        <strong className={styles.schoolName}>{post.school_name}</strong>
 		      </Link>
+          <li>{post.school_info}</li>
+          <div className={styles.days}>
+          <span className={styles.daysSince}>23</span>
+          <span className={styles.daysSinceText}>Days Since Order</span>
+          </div>
+          <ul>
+          <li className="list-items">Five PCs</li>
+          <li className="list-items">Seven Laptops</li>
+          <li className="list-items">Five Monitors</li>
+          <li className="list-items">6 Keyboards</li>
+          </ul>
+
 		    </li>
 		  );
   	}
@@ -33,7 +45,7 @@ class PostsIndex extends Component {
           </Link>
         </div>
         <h3>Posts</h3>
-        <ul className="list-group">
+        <ul className={'list-group ' + styles.listGroup}>
           {this.renderPosts()}
         </ul>
       </div>
