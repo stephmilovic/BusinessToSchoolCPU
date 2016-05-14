@@ -4,27 +4,6 @@ import { createPost } from '../actions/index';
 import { Link } from 'react-router';
 
 class PostsNew extends Component {
-	constructor(props){
-		super(props);
-		this.incrementCount = this.incrementCount.bind(this);
-		this.decrementCount = this.decrementCount.bind(this);
-		this.state = {
-			pcCount: 0
-		}
-	}
-	incrementCount() {
-		this.setState({
-		  pcCount: this.state.pcCount + 1
-		});
-	}
-	decrementCount() {
-		if(this.state.pcCount > 0) {
-			this.setState({
-			  pcCount: this.state.pcCount - 1
-			});		
-		}
-	}
-
   static contextTypes = {
     router: PropTypes.object
   };
@@ -40,11 +19,11 @@ class PostsNew extends Component {
   }
 
   render() {
-    const { fields: { school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info, pcs }, handleSubmit } = this.props;
+    const { fields: { school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info }, handleSubmit } = this.props;
 
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-        <h3>New Equipment Request</h3>
+        <h3>Create A New Post</h3>
         <div className={`form-group ${school_name.touched && school_name.invalid ? 'has-danger' : ''}`}>
           <label>School Name</label>
           <input type="text" className="form-control" {...school_name} />
@@ -93,17 +72,6 @@ class PostsNew extends Component {
           </div>
         </div>
 
-        <div className={`form-group`}>
-          <label>What do you need?</label>
-          <div className="input-group">
-            <input type="text" value={this.state.pcCount} className="form-control" aria-label="..." {...pcs} />
-            <div className="input-group-btn">
-              <button className="btn btn-default" type="button" onClick={this.decrementCount}>-</button>
-              <button className="btn btn-default" type="button" onClick={this.incrementCount}>+</button>
-            </div>
-          </div>
-        </div>
-
         <div className={`form-group ${school_info.touched && school_info.invalid ? 'has-danger' : ''}`}>
           <label>Tell us more!</label>
           <textarea className="form-control" {...school_info} />
@@ -138,10 +106,10 @@ function validate(values) {
     errors.school_address = 'Enter your school\'s address';
   }
   if(!values.school_zip) {
-    errors.school_zip = 'Enter your school\'s zip code';
+    errors.school_zip = 'Enter some content';
   }
   if(!values.school_info) {
-    errors.school_info = 'Let us know why you need the equipment!';
+    errors.school_info = 'Enter some content';
   }
 
   return errors;
@@ -151,6 +119,6 @@ function validate(values) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'PostsNewForm',
-  fields: ['school_name', 'contact_name', 'contact_email', 'contact_phone', 'school_address', 'school_zip', 'school_info', 'pcs'],
+  fields: ['school_name', 'contact_name', 'contact_email', 'contact_phone', 'school_address', 'school_zip', 'school_info'],
   validate
 }, null, { createPost })(PostsNew);

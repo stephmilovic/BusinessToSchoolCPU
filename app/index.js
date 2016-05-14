@@ -6,7 +6,6 @@ import thunk from 'redux-thunk';
 import { Router, browserHistory } from 'react-router';
 import reducers from './reducers';
 import routes from './routes';
-import promise from 'redux-promise';
 
 const createStoreWithMiddleware = applyMiddleware(
   thunk
@@ -16,4 +15,4 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory} routes={routes} />
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('#app'));

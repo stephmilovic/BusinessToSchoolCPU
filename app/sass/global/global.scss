@@ -1,0 +1,110 @@
+//Importing global variables
+@import '../assets/sass.scss';
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+  font-family: sans-serif; 
+  text-size-adjust: 100%; 
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;  
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+// All Headings
+h1, h2, h3 {
+  font-family: $heading-font-family;
+  color: $heading-font-color;
+}
+h1 {
+  font-size: $h1-font-size;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  font-weight: 500;
+  line-height: 1.4em;
+  margin-bottom: 0.2em;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 0.2em;
+}
+// Links
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  &:hover {
+    color: $base-link-color-hover;
+  }
+}
+
+// Paragraph
+p {
+  font-family: $sans-serif;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-bottom: 0.55em;
+}
+
+// font face
+/**
+ * Fonts, mixins, reusable variables (colors)
+ */
+@font-face {
+  font-family: 'bariol-web';
+  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.eot");
+  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.eot?#iefix") format("embedded-opentype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.woff2") format("woff2"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.woff") format("woff"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.ttf") format("truetype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.svg#bariol_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'bariol-bold';
+  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.eot");
+  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.eot?#iefix") format("embedded-opentype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.woff2") format("woff2"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.woff") format("woff"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.ttf") format("truetype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.svg#bariol_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "cleverFont";
+  font-weight: normal;
+  font-style: normal;
+  src: url('//static.cleverbridge.com/mycontent/1/cleverFont.eot');
+  src: url('//static.cleverbridge.com/mycontent/1/cleverFont.eot?#iefix') format("embedded-opentype"), 
+  url('//static.cleverbridge.com/mycontent/1/cleverFont.woff') format("woff"), 
+  url('//static.cleverbridge.com/mycontent/1/cleverFont.ttf') format("truetype"), 
+  url('//static.cleverbridge.com/mycontent/1/cleverFont.svg#cleverFont') format("svg"); }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'bariol-web';
+    src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.svg#bariol_regularregular") format("svg"); } 
+}
