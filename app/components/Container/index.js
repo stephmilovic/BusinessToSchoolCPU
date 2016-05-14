@@ -8,19 +8,12 @@ export default class Home extends Component {
   }
 
   render() {
+  	const { main, header } = this.props;
     return (
       <div className={styles.contain}>
-	      <header className={styles.header}>
-	      		<img className={styles.logo} src={require('../../img/CPU-EDU-WHITE.png')}  />
-	      			<div className={styles.navigationBar}>
-		      			<ul>
-		      			  <li><a href="#contact">Contact</a></li>
-		      			  <li><a class="active" href="#home">Learn More</a></li>
-		      			</ul>
-	      			</div>
-	      </header>	
+      	{header}
 	      <div className={styles.layout}>
-	      	{this.props.children}
+	      	{main}
 	      </div>
 	      <footer className={styles.footer}>
 	      	<div className={styles.footerLeft}>

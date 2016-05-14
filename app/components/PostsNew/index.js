@@ -24,8 +24,8 @@ class PostsNew extends Component {
     
   	const { fields: { school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info, pcs, laptops, tablets, date }, handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}  className="container">
-        <h3>New Equipment Request</h3>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}  className={'container '+ styles.form}>
+        <h2>New Equipment Request</h2>
         <div className={`form-group ${school_name.touched && school_name.invalid ? 'has-danger' : ''}`}>
           <label>School Name</label>
           <input type="text" className="form-control" {...school_name} />

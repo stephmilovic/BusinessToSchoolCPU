@@ -5,7 +5,7 @@
 	background: $school-color;
 	border-color: $school-color;
 	color: $light-font-color;
-	margin-right: 10px;
+	margin-right: 20px;
 	&:hover {
 		background: darken($school-color, 10);
 		border-color: darken($school-color, 10);
@@ -24,4 +24,15 @@
 
 .formGroup {
 	@extend %clearfix;
+}
+
+.form {
+	padding-top: 100px;
+	padding-bottom: 50px;
+	h2 {
+		color: $school-color;
+		font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 30px;
+	}
 }

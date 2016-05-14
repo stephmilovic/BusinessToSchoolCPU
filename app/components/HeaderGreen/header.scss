@@ -1,0 +1,39 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+.navigationBar {
+	padding: 25px 20px;
+	    float: right;
+
+	li {
+		font-weight: bold;
+    float: right;
+    position: relative;
+		margin-right: 30px;;
+		font-size: $base-font-size * 1.1
+	}
+
+	li a {
+		color: $business-color;
+		text-decoration: none;
+		float: right;
+		&:hover {
+			color: darken($business-color, 10);
+			text-decoration: none;
+			border-bottom: 2px solid;
+		}	
+	}
+
+}
+.header {
+	position: absolute;
+	z-index: 99;
+    width: 100%;
+}
+
+.logo { 
+	width: 75px;
+	height: auto;
+	display: inline-block;
+	margin: 0 20px;
+}

@@ -1,0 +1,16 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+.about {
+	color: $business-color;
+	padding-top: 100px;
+
+	h1 {
+		font-size: 2.2em;
+	color:$business-color;
+	}
+	p {
+		font-size: 1.8em;
+		font-weight: bold;
+		line-height: 1.3em;}
+}

@@ -14,22 +14,20 @@ class PostsIndex extends Component {
   	for (let key in this.props.posts) {
   		let post = this.props.posts[key];
 		  schools.push(
-		    <li className="list-group-item" key={key}>
-		      <Link to={"posts/" + key}>
-		        <strong className={styles.schoolName}>{post.school_name}</strong>
-		      </Link>
-          <li>{post.school_info}</li>
+		    <li className={'list-group-items ' + styles.listGroupItem} key={key}>
+		      <h2><strong className={styles.schoolName}>{post.school_name}</strong></h2>
+          <li className={styles.postInfo}>{post.school_info}</li>
           <div className={styles.days}>
-          <span className={styles.daysSince}>23</span>
+          <span className={styles.daysSince}>{post.days}</span>
           <span className={styles.daysSinceText}>Days Since Order</span>
           </div>
+          <button type="submit" className={'btn ' + styles.submitBtn + ' ' + styles.helpButton}>Help This School</button>
           <ul>
-          <li className="list-items">Five PCs</li>
-          <li className="list-items">Seven Laptops</li>
-          <li className="list-items">Five Monitors</li>
-          <li className="list-items">6 Keyboards</li>
+	          <li className={styles.listItems}><strong>{post.pcs}</strong> Desktops</li>
+	          <li className={styles.listItems}><strong>{post.laptops}</strong> Laptops</li>
+	          <li className={styles.listItems}><strong>{post.tablets}</strong> Tablets</li>
           </ul>
-
+          
 		    </li>
 		  );
   	}
@@ -38,14 +36,9 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div>
-        <div className="text-xs-right">
-          <Link to="/posts/new" className="btn btn-primary">
-            Add a Post
-          </Link>
-        </div>
-        <h3>Posts</h3>
-        <ul className={'list-group ' + styles.listGroup}>
+      <div className={styles.listGroup}>
+        <h3 className={styles.postTitle}>Schools in Need</h3>
+        <ul className={'list-group '}>
           {this.renderPosts()}
         </ul>
       </div>
