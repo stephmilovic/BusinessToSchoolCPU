@@ -14,22 +14,22 @@ class PostsIndex extends Component {
   	for (let key in this.props.posts) {
   		let post = this.props.posts[key];
 		  schools.push(
-		    <li className="list-group-item" key={key}>
+		    <li className={'list-group-items ' + styles.listGroupItem} key={key}>
 		      <Link to={"posts/" + key}>
 		        <strong className={styles.schoolName}>{post.school_name}</strong>
 		      </Link>
-          <li>{post.school_info}</li>
+          <li className={styles.postInfo}>{post.school_info}</li>
           <div className={styles.days}>
           <span className={styles.daysSince}>23</span>
           <span className={styles.daysSinceText}>Days Since Order</span>
           </div>
+          <button className={"btn btn-success " + styles.helpButton} >Help Them</button>
           <ul>
-          <li className="list-items">Five PCs</li>
-          <li className="list-items">Seven Laptops</li>
-          <li className="list-items">Five Monitors</li>
-          <li className="list-items">6 Keyboards</li>
+          <li className={styles.listItems}>{post.pcs} Desktops</li>
+          <li className={styles.listItems}>{post.laptops} Laptops</li>
+          <li className={styles.listItems}>{post.tablets} Tablets</li>
           </ul>
-
+          
 		    </li>
 		  );
   	}
@@ -39,12 +39,12 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <div className="text-xs-right">
-          <Link to="/posts/new" className="btn btn-primary">
+        <div className="text-xs-right ">
+          <Link to="/posts/new" className={"btn btn-primary " + styles.addPost}>
             Add a Post
           </Link>
         </div>
-        <h3>Posts</h3>
+        <h3 className={styles.postTitle}>Posts</h3>
         <ul className={'list-group ' + styles.listGroup}>
           {this.renderPosts()}
         </ul>
