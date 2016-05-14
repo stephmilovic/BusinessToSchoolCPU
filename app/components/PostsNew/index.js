@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import { createPost } from '../actions/index';
+import { createPost } from '../../actions/index';
 import { Link } from 'react-router';
+import styles from './posts-new';
 
 class PostsNew extends Component {
   static contextTypes = {
@@ -79,8 +80,7 @@ class PostsNew extends Component {
             {school_info.touched ? school_info.error : ''}
           </div>
         </div>
-
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className={'btn ' + styles.submitBtn}>Submit</button>
         <Link to="/" className="btn btn-danger">Cancel</Link>
       </form>
     );

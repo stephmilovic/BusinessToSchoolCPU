@@ -76,32 +76,6 @@ p {
   margin-bottom: 0.55em;
 }
 
-// font face
-/**
- * Fonts, mixins, reusable variables (colors)
- */
-@font-face {
-  font-family: 'bariol-web';
-  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.eot");
-  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.eot?#iefix") format("embedded-opentype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.woff2") format("woff2"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.woff") format("woff"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.ttf") format("truetype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol_regular.svg#bariol_regularregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'bariol-bold';
-  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.eot");
-  src: url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.eot?#iefix") format("embedded-opentype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.woff2") format("woff2"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.woff") format("woff"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.ttf") format("truetype"), url("//static.cleverbridge.com/corporatecdn/www/themes/fonts/bariol-bold.svg#bariol_regularregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "cleverFont";
-  font-weight: normal;
-  font-style: normal;
-  src: url('//static.cleverbridge.com/mycontent/1/cleverFont.eot');
-  src: url('//static.cleverbridge.com/mycontent/1/cleverFont.eot?#iefix') format("embedded-opentype"), 
-  url('//static.cleverbridge.com/mycontent/1/cleverFont.woff') format("woff"), 
-  url('//static.cleverbridge.com/mycontent/1/cleverFont.ttf') format("truetype"), 
-  url('//static.cleverbridge.com/mycontent/1/cleverFont.svg#cleverFont') format("svg"); }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
