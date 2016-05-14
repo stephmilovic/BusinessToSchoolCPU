@@ -1,7 +1,51 @@
-.header{
-	border: 1px solid #ddd
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    float: right;
+}
+li {
+    float: right;
+    position: relative;
+	margin-right: 30px;
+}
+li a {
+    color: #2D97DF;
+    padding: 0px 0px;
+    text-decoration: none;
+    float: right;
+}
+li a:hover {
+    background-color: #ffffff;
+}
+.logo { 
+	vertical-align: middle;
+    height: 100px;
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 20px;
 }
 footer{
-	border: 1px solid #ddd
-	display:block;
+    background-color: #33485F;
+    color: white;
+    clear: both;
+    text-align: left;
+    padding: 10px;
+    margin-left: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+.layout{
+    padding: 20px;
+    flex: 1;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.cleverbrigeLogo {
+	height: 20px;
+	margin-left: 600px;
 }
