@@ -1,0 +1,62 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+.home {
+	background: url("../../img/landing.jpg"), linear-gradient(10deg, #000, #fff), no-repeat #fff scroll;
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  h2, p { 
+  	color: $light-font-color;
+  	text-align: center;
+  	font-weight: bold;
+  }
+  h2 {
+  	font-size: 60px;
+  }
+  p {
+  	font-size: 22px;
+  	line-height: 150%;
+  	margin-bottom: 50px
+  }
+}
+
+.business, .school {
+	position: relative;
+	float: left;
+	transition: all 0.2s ease-in-out;
+	width: 100%;
+	padding: 25vh 0 0;
+	height: 100vh;
+	@include media($medium-screen) {
+	  @include grid-item-columns(6);
+	}
+}
+
+.business {
+	background: rgba(32,206,109,0.5);
+	border-right: 2px solid $light-font-color;
+}
+
+.school {
+	background: rgba(45,151,223,0.5);
+}
+ 
+.lineButton {
+	background: transparent;
+	border: 2px solid $light-font-color;
+	color: $light-font-color;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 136px;
+	font-size: 18px;
+	font-weight: bold;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		background: $light-font-color;
+		color: $blue-dark;
+	}
+}

@@ -1,0 +1,96 @@
+//Importing global variables
+@import '../../sass/assets/sass.scss';
+
+li{
+	list-style: none;
+}
+.days{
+	float: right;
+	width: 120px;
+	height: 120px;
+	position: relative;
+	background-color: $orange;
+	padding: 10px;
+	margin-top: -125px;
+	margin-right: -35px;
+	color: $slight-white;
+	border-radius: 100%;
+	z-index: 2;
+	transform: rotate(27deg);
+	-webkit-transform: rotate(27deg);
+	-moz-transform: rotate(27deg);
+
+}
+.daysSince{
+	font-size: 40px;
+  margin-bottom: 12px;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+.daysSinceText{
+	font-size: 15px;
+	float: right;
+	text-align: center;
+}
+.schoolName{
+	color: $school-color;
+	font-size: 27px;
+}
+.listGroup {
+	padding-top: 100px;
+	width: 95%;
+	max-width: 825px;
+	margin: 0 auto;
+	h3 {
+		color: $business-color;
+		margin-bottom: 30px;
+	}
+}
+.listGroupItem{
+	margin-bottom: 40px;
+	background-color: $gray-lightest;
+	padding: 20px;
+	z-index: 1;
+}
+.listItems{
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.helpButton{
+	color: $slight-white;
+	float: right;
+	font-size: 21px;
+	margin-right: 100px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+.addPost{
+	margin: 0 auto;
+	margin-top: 20px;
+	z-index: 10;
+	width: 140px;
+	margin-left: 63.5%;
+}
+
+.postInfo{
+	font-size: 18px;
+	margin-bottom: 12.5px;
+}
+.postTitle{
+	font-size: 40px;
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+.submitBtn {
+	background: $business-color;
+	border-color: $business-color;
+	color: $light-font-color;
+	margin-right: 80px;
+	&:hover {
+		background: darken($business-color, 10);
+		border-color: darken($business-color, 10);
+	}
+}
