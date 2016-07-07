@@ -92,7 +92,7 @@ class PostsNew extends Component {
 	          <input type="text" className="form-control" aria-label="..." {...tablets} />
           </div>
         </div>
-        <div style={{display: 'none'}}>
+        <div style={{display: 'block'}}>
           <label>Date Submitted</label>
           <input id="dateSubmit" type="text" className="form-control" {...date} value={date.value || ''} />
         </div>

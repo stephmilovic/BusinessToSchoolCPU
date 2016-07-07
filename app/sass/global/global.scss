@@ -90,3 +90,7 @@ body, #app {
     min-height: 100vh;
     flex-direction: column;
 }
+
+.btn {
+	transition: all 0.2s ease-in-out;
+}

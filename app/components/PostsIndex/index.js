@@ -19,7 +19,7 @@ class PostsIndex extends Component {
           <li className={styles.postInfo}>{post.school_info}</li>
           <div className={styles.days}>
           <span className={styles.daysSince}>{ post.days ? post.days : 0  }</span>
-          <span className={styles.daysSinceText}>Days Since Order</span>
+          <span className={styles.daysSinceText}>Days Since Request</span>
           </div>
           <a href={'mailto:' + post.contact_email + '?subject=' + post.school_name + ' Techology Donation&body=Hi ' + post.contact_name + '. My company has technology we are interested in donating to ' + post.school_name + '. Let\'s make it happen!'}><button type="submit" className={'btn ' + styles.submitBtn + ' ' + styles.helpButton}>Help This School</button></a>
           <ul>

@@ -54,8 +54,9 @@
 	width: 136px;
 	font-size: 18px;
 	font-weight: bold;
+	transition: all 0.2s ease-in-out;
 	&:hover {
 		background: $light-font-color;
-		color: $black;
+		color: $blue-dark;
 	}
 }
