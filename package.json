@@ -2,7 +2,7 @@
   "name": "clever-react-redux",
   "version": "1.0.0",
   "description": "React + Redux + cb Sass App Starter",
-  "main": "index.jsx",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git://git.chi.cleverbridge.com/front-end-chicago/clever-react-redux"
@@ -12,7 +12,7 @@
     "clean": "rimraf ./www/build",
     "build": "npm run clean && NODE_ENV=production webpack",
     "server:prod": "NODE_ENV=production pm2 start server.js",
-    "server:dev": "NODE_ENV=development node server.js"
+    "start": "NODE_ENV=development node server.js"
   },
   "author": "smilovic",
   "license": "ISC",
