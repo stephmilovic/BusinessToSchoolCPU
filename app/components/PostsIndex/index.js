@@ -8,7 +8,6 @@ class PostsIndex extends Component {
   componentWillMount() {
     this.props.fetchPosts();
   }
-//school_name, contact_name, contact_email, contact_phone, school_address, school_zip, school_info
   renderPosts() {
   	let schools = [];
   	for (let key in this.props.posts) {
