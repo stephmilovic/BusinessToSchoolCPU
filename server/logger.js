@@ -17,7 +17,7 @@ function logServerConfig(err) {
   } else {
   	log.info('==========================================');
   	log.info('Environment:', Config.env);
-  	log.info('Listening at: swapify.chi.cleverbridge.com');
+  	log.info('Listening at: cputoedu.herokuapp.com');
   	log.info('==========================================');
   }
 }
