@@ -18,6 +18,7 @@
   "author": "smilovic",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^6.3.5",
     "classnames": "^2.2.3",
     "css-loader": "^0.23.1",
     "eslint": "^2.5.1",
