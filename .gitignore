@@ -2,4 +2,3 @@ node_modules
 npm-debug.log
 sftp-config.json
 .DS_Store
-www/build
