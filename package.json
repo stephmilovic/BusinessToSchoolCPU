@@ -12,7 +12,7 @@
     "lint": "eslint src --ext .jsx",
     "clean": "rimraf ./www/build",
     "build": "npm run clean && NODE_ENV=production webpack",
-    "server:prod": "NODE_ENV=production pm2 start server.js",
+    "server:prod": "NODE_ENV=production node server.js",
     "server:dev": "NODE_ENV=development node server.js"
   },
   "author": "smilovic",
