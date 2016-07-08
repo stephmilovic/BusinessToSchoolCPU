@@ -34,6 +34,6 @@ app.get('*', (req, res) => {
 
 server
     .listen(
-      Config.host,
+      process.env.PORT || 5000,
     (err) => logServerConfig(err));
 
