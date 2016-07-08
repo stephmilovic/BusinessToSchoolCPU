@@ -1,13 +1,14 @@
 {
-  "name": "clever-react-redux",
+  "name": "cputoedu",
   "version": "1.0.0",
-  "description": "React + Redux + cb Sass App Starter",
+  "description": "CPU to EDU",
   "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git://git.chi.cleverbridge.com/front-end-chicago/clever-react-redux"
   },
   "scripts": {
+  	"preinstall": "npm i -g pm2",
     "lint": "eslint src --ext .jsx",
     "clean": "rimraf ./www/build",
     "build": "npm run clean && NODE_ENV=production webpack",
