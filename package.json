@@ -12,7 +12,7 @@
     "clean": "rimraf ./www/build",
     "build": "npm run clean && NODE_ENV=production webpack",
     "server:prod": "NODE_ENV=production pm2 start server.js",
-    "start": "NODE_ENV=development node server.js"
+    "server:dev": "NODE_ENV=development node server.js"
   },
   "author": "smilovic",
   "license": "ISC",
@@ -69,5 +69,8 @@
     "redux-thunk": "^2.1.0",
     "serve-favicon": "^2.3.0",
     "serve-static": "^1.10.2"
+  },
+  "engines": {
+    "node": "4.4.0"
   }
 }
